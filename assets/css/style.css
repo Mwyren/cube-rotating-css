@@ -59,10 +59,10 @@ body{
 
 @keyframes rotate {
   from{
-    transform: rotateX(0deg) rotateY(0deg) rotateX(0deg);
+    transform: rotateX(0deg) rotateY(0deg);
   }
 
   to{
-    transform: rotateX(360deg) rotateY(360deg) rotateX(360deg);
+    transform: rotateX(360deg) rotateY(360deg);
   }
 }
