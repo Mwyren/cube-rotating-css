@@ -1,0 +1,68 @@
+*, ::before, ::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('https://media.istockphoto.com/photos/deep-space-background-picture-id178149253?b=1&k=20&m=178149253&s=170667a&w=0&h=_XDvcsDmRo_O9sV9l_Q4kNXZQq14xU9Cf-Ai7LpJOSY=') no-repeat center center/cover;
+  height: 100vh;
+}
+
+.container{
+  height: 300px;
+  width: 300px;
+  perspective: 1000px;
+}
+
+.cube{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  transform-style: preserve-3d;
+  animation: rotate 5s linear infinite;
+}
+
+.side{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: radial-gradient(circle at center center, transparent 0%,rgb(33,33,33) 99%),repeating-linear-gradient(0deg, rgba(163, 163, 163,0.2) 0px, rgba(163, 163, 163,0.2) 1px,transparent 1px, transparent 6px),repeating-linear-gradient(90deg, rgba(163, 163, 163,0.2) 0px, rgba(163, 163, 163,0.2) 1px,transparent 1px, transparent 6px),linear-gradient(90deg, rgb(33,33,33),rgb(33,33,33));
+}
+
+.top{
+  transform: rotateX(90deg) translateZ(150px);
+}
+
+.bottom{
+  transform: rotateX(90deg) translateZ(-150px);
+}
+
+.left{
+  transform: rotateY(90deg) translateZ(-150px);
+}
+
+.right{
+  transform: rotateY(90deg) translateZ(150px);
+}
+
+.front{
+  transform: translateZ(150px);
+}
+
+.back{
+  transform: translateZ(-150px);
+}
+
+@keyframes rotate {
+  from{
+    transform: rotateX(0deg) rotateY(0deg) rotateX(0deg);
+  }
+
+  to{
+    transform: rotateX(360deg) rotateY(360deg) rotateX(360deg);
+  }
+}
